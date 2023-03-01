@@ -1,15 +1,16 @@
 # Dependencies
 import streamlit as st
-st.set_page_config(page_title="Golang")
+st.set_page_config(page_title="SQL")
 
 
-from Go.Intro.intro import intro
-
+from SQL.Intro.intro import intro
+from SQL.Blocks.building_blocks import building_blocks
 
 def main():
 
     menu = [
-        "Intro",  
+        "Intro",
+        "Building Blocks"  
         
     ]
     
@@ -17,7 +18,8 @@ def main():
 
     if sub_page == "Intro":
         intro()
-    
+    if sub_page == "Building Blocks":
+        building_blocks()
     else:
         pass
 

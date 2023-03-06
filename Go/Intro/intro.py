@@ -39,14 +39,24 @@ def intro():
                 PATH environment variable. On Linux and macOS, you can do this by 
                 adding the following line to your .bashrc or .bash_profile file:
 
-                To check go version use:
-
-                ```
-                go version
-                ```
             '''
             )
 
+    
+    with st.expander('Basic Commands'):
+        st.write(
+            '''
+                * go help: check available commands
+                * go version: check go version
+                * go fmt: format go code
+                * go run: run go file
+                * go build: builds file, reports errors, puts executable in the folder
+                * go install: compiles the program, names the exe and puts it in folder's bin     
+            
+            '''
+            
+        )
+    
     with st.expander("Worskpace"):
         st.write(
             '''
@@ -102,7 +112,7 @@ def intro():
                 If you're starting a new project, create a new directory outside of your GOPATH 
                 and initialize a new module with the command: 
                 
-                ``go mod init <module-name>`` 
+                ```go mod init <module-name>``` 
                 
                 This will create a new go.mod file in your project directory.
                 
@@ -114,13 +124,13 @@ def intro():
 
                 To add a new dependency, use the 
                 
-                ``go get command`` 
+                ```go get command``` 
                 
                 followed by the name of the package you want to add. 
                 
                 Example:
                  
-                `` go get github.com/gin-gonic/gin. ``
+                ``` go get github.com/gin-gonic/gin. ```
                 
                 Once a package is added, the module will update the **go.mod** file to include 
                 the new package and its version, as well as any dependencies that package may have.
@@ -129,7 +139,7 @@ def intro():
                 
                 Example: 
                 
-                ``go get github.com/gin-gonic/gin@v1.6.3.``
+                ```go get github.com/gin-gonic/gin@v1.6.3.```
 
                 Use the dependencies in your code:
 

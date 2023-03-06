@@ -15,7 +15,7 @@ def building_blocks():
     st.write("")
     st.write("")
 
-    with st.expander("Data Typese"):
+    with st.expander("Data Types"):
         st.write(
             """
             Python has the following built-in data types:

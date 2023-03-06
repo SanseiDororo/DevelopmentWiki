@@ -4,12 +4,14 @@ st.set_page_config(page_title="Golang")
 
 
 from Go.Intro.intro import intro
+from Go.Blocks.building_blocks import building_blocks
 
 
 def main():
 
     menu = [
-        "Intro",  
+        "Intro", 
+        "Blocks", 
         
     ]
     
@@ -17,6 +19,8 @@ def main():
 
     if sub_page == "Intro":
         intro()
+    if sub_page == "Blocks":
+        building_blocks()
     
     else:
         pass

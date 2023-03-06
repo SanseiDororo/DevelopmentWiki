@@ -62,17 +62,18 @@ def intro():
 
                 A typical Go workspace contains three subdirectories:
 
-                **SRC**: This directory contains your Go source code files organized in packages. 
-                Each package is a directory containing one or more Go source files and a go.mod 
-                file that specifies the package's dependencies.
+                * **BIN**: This directory contains executable programs that you build from 
+                your Go source code. When you run the go install command, Go compiles your 
+                code and generates binary executable files that are stored in this directory.
 
-                **PKG**: This directory contains compiled Go package files (.a files) 
+                * **PKG**: This directory contains compiled Go package files (.a files) 
                 that are generated when you build your Go code. These files are architecture-specific 
                 and are stored in subdirectories named after the target architecture.
 
-                **BIN**: This directory contains executable programs that you build from 
-                your Go source code. When you run the go install command, Go compiles your 
-                code and generates binary executable files that are stored in this directory.
+                * **SRC**: This directory contains your Go source code files organized in packages. 
+                Each package is a directory containing one or more Go source files and a go.mod 
+                file that specifies the package's dependencies.
+
 
                 By convention, you should organize your workspace such that each project is 
                 contained in a separate directory under the src directory. For example, if you 
@@ -85,9 +86,77 @@ def intro():
                 This tells the Go tools where to find your source code, compiled packages, 
                 and executable files. 
 
+                **After GO 1.13 GO modules replaced Wordkspaces**
+
             
             '''
             )
+    with st.expander("Go Modules"):
+        st.write(
+            '''
+                Go modules is official go's dependecies package management. It is
+                It is required since go version 1.13
 
+                * To use Go Modules in a Go project, follow these steps:
+
+                If you're starting a new project, create a new directory outside of your GOPATH 
+                and initialize a new module with the command: 
+                
+                ``go mod init <module-name>`` 
+                
+                This will create a new go.mod file in your project directory.
+                
+                If you're working with an existing project that's using an older version of Go, 
+                update to Go 1.11 or later, and then enable Go Modules by setting the environment 
+                variable GO111MODULE=on in your terminal or command prompt.
+                
+                * Add dependencies to your project:
+
+                To add a new dependency, use the 
+                
+                ``go get command`` 
+                
+                followed by the name of the package you want to add. 
+                
+                Example:
+                 
+                `` go get github.com/gin-gonic/gin. ``
+                
+                Once a package is added, the module will update the **go.mod** file to include 
+                the new package and its version, as well as any dependencies that package may have.
+                If you want to specify a specific version of a package, you can do so with the 
+                @version suffix. 
+                
+                Example: 
+                
+                ``go get github.com/gin-gonic/gin@v1.6.3.``
+
+                Use the dependencies in your code:
+
+                After you've added the necessary dependencies to your project, 
+                you can import them in your code using the normal Go import statements.
+                When you build or run your project, the Go Modules system will 
+                automatically download any missing dependencies and ensure that the 
+                correct versions are used.
+                
+                * Manage your dependencies:
+
+                To manage your dependencies, you can use the go mod command to 
+                list, add, remove, and update packages and versions.
+                
+                Example: 
+                
+                * go mod list: will list all the dependencies of your project
+                * go mod tidy: will remove any unused dependencies and ensure that the go.mod and 
+                  go.sum files are up to date.
+                
+                  
+                By following these steps, you can properly use Go Modules to manage 
+                dependencies in your Go project.
+
+
+
+            '''
+            )
    
    

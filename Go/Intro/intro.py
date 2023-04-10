@@ -51,7 +51,8 @@ def intro():
                 * go fmt: format go code
                 * go run: run go file
                 * go build: builds file, reports errors, puts executable in the folder
-                * go install: compiles the program, names the exe and puts it in folder's bin     
+                * go install: compiles the program, names the exe and puts it in folder's bin 
+                * go test: it looks for a test file in the package folder and executes it's functions    
             
             '''
             

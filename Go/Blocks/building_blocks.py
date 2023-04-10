@@ -62,9 +62,14 @@ def building_blocks():
 
             **CONVENCTIONS**
 
-            * Use CamelCase for multi-word names.
+            * Use mixedCaps for variables
+            * Use short names in the function scope
+            * Use all capitals for acronyms such as fastAPI
+            * Use CamelCase for multi-word names and package scope items.
             * Interface names consists of method names plus er. For example Formatter.
             * There are many reserved identifiers in go such as var, type, defer break etc.
+              You cannot use reserved names as a variables.
+            * Names should start with a letter or underscore.
             
         
         """
@@ -77,7 +82,9 @@ def building_blocks():
                 Go is statically typed langugae meaning that variables are named storage location in 
                 memory that holds a value of a certain type. Strictly speaking we have two types of
                 identifiers in go: variables and types. Identifiers in go must be a sequence of letters.
-         
+
+                ##### Declaration 
+
                 In go you can declare a variable with the var key word followed by the name of the variable
                 and the corresponding type
 
@@ -87,6 +94,7 @@ def building_blocks():
                 var age int = 32
                 var name string = "John"
                 ```
+                If you declare a variable without a value, 0 is assigned automatically.
 
                 When assigning new value to a already declared value, we use = 
 
@@ -95,7 +103,28 @@ def building_blocks():
                 age = 64
                 ```
 
-                #### Short declaration operator
+                We use declaration when: 
+                
+                * We don't know the initial value of a variable.
+                * We need a package scoped variable.
+                * When grouping variables for greater readability
+
+                Grouping related variables example:
+
+                ```
+                var (
+                    customer string
+                    name string
+                    surname string
+                    address string
+                )
+                ```
+            """)
+        st.write("---")
+        st.write(
+            
+                """
+                ##### Short declaration operator
 
                 You can also use the := operator for a shorter way to declare and 
                 initialize a variable with inferred type:
@@ -106,9 +135,47 @@ def building_blocks():
                 surname := "Doe"
                 ```
 
+                We use short declaration when:
+
+                * If you know initial value of the variable.
+                * When you want to have consise code.
+                * For redeclaration
+            """)
+        st.write("---")
+        st.write(
+            
+            """
+                #### Type conversion
+
+                If we want to change type of a variable, we use type(value) declaration. We can actualy
+                convert value of a given type to other type.
+
+                For example:
+
+                ```
+                package main
+
+                import (
+                	"fmt"
+                )
+
+                func main() {
+                
+                	var doubled int
+                	height := 1.5
+                	number := 2
+
+                	fmt.Println(height)
+                	fmt.Println(number)
+
+                	doubled = int(float64(number) * height)
+                	fmt.Println(doubled)
+
+                }    
+                ```
             """
         )
-        st.write("")
+        st.write("---")
         st.write(
             """
             In Go, you can check the memory address of an object using the **&** operator followed by the variable name. 
@@ -127,7 +194,7 @@ def building_blocks():
             }
 
             ```
-       
+
         
             """
         )
@@ -187,6 +254,24 @@ def building_blocks():
         
         """
         )
+        st.write("---")
+
+        st.write('''
+        
+            ##### CODING EXAMPLES
+
+            * [Assigning variables](https://play.golang.org/p/-LYS4_vrIjT)
+            * [Creating different types and asign default value](https://play.golang.org/p/A6S1em2paDD)
+            * [Create custom type and printout the value with Printf("%T", variable name)](https://play.golang.org/p/Tgz55p-RyW6)
+            * [Output the variable in binary, decimal and hexadecimal.](https://play.golang.org/p/UYQc_28EYK0)
+            * [Using operators in go language](https://play.golang.org/p/76R-poSzaY)
+            * [Declaring constants in GO](https://play.golang.org/p/1JXxqY_gaGE)
+            * [Raw string literal](https://play.golang.org/p/uEBXo3LGpOV)
+            * [Iota is keyword which increments value for 1](https://play.golang.org/p/QWqnXcElqEV)
+        
+        
+        
+        ''')
 
     with st.expander("Scopes"):
         st.write(
@@ -239,5 +324,9 @@ def building_blocks():
 
         """
         )
+
+    
+
+     
 
    

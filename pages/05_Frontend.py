@@ -5,13 +5,15 @@ st.set_page_config(page_title="Frontend")
 from Frontend.Intro.intro import intro
 from Frontend.CSS.css import css
 from Frontend.Sass.sass import sass
+from Frontend.React.react import react
 
 def main():
 
     menu = [
         "Intro", 
         "CSS",
-        "Sass"
+        "Sass",
+        "React",
         
     ]
     
@@ -23,6 +25,8 @@ def main():
         css()
     if sub_page == "Sass":
         sass()
+    if sub_page == "React":
+        react()
     else:
         pass
 

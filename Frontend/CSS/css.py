@@ -525,4 +525,562 @@ def css():
             '''
             )
         
+    with st.expander('Flex Box'):\
+        st.write('''
+            Flexbox is a one-dimensional layout method for laying out items in rows or columns.
+            Flexbox is a great tool for creating responsive layouts. 
+
+            Flex box has two main axes: the main axis and the cross axis. The main axis is the
+            primary axis along which flex items are laid out. The cross axis runs perpendicular
+            to the main axis. The main axis direction is defined by the flex-direction property,
+            and the cross axis direction is defined by the flex-direction property.
+
+            The flex-direction property specifies the direction of the main axis. It can have
+            one of the following values:
+
+            * row: The main axis is defined to be the same as the text direction. The main start
+            and main end points are the same as the content direction.
+            * row-reverse: The main axis is defined to be the same as the text direction. The main
+            start and main end points are the same as the opposite of the content direction.
+            * column: The main axis is defined to be perpendicular to the text direction. The main
+            start and main end points are the same as the content direction.
+            * column-reverse: The main axis is defined to be perpendicular to the text direction.
+            The main start and main end points are the same as the opposite of the content direction.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+            ```
+            ---
+
+            The flex-wrap property specifies whether flex items are forced into a single line or
+            can be wrapped onto multiple lines. It can have one of the following values:
+
+            * nowrap: The flex items are not wrapped. The flex container is one single line.
+            * wrap: The flex items are wrapped onto multiple lines. The direction of the wrap is
+            defined by the flex-direction property.
+            * wrap-reverse: The flex items are wrapped onto multiple lines. The direction of the
+            wrap is the opposite of the direction defined by the flex-direction property.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            ```
+
+            ---
+
+            The justify-content property specifies the alignment along the main axis. It can have
+            one of the following values:
+
+            * flex-start: The flex items are packed toward the start of the flex container.
+            * flex-end: The flex items are packed toward the end of the flex container.
+            * center: The flex items are centered along the main axis.
+            * space-between: The flex items are evenly distributed in the flex container. The first
+            flex item is flushed to the start of the container, and the last flex item is flushed
+            to the end of the container.
+            * space-around: The flex items are evenly distributed in the flex container with equal
+            space around them.
+            * space-evenly: The flex items are distributed so that the spacing between any two
+            adjacent items is the same.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            ```
+            ---
+
+            The align-items property specifies the alignment along the cross axis. It can have
+            one of the following values:
+            
+            * stretch: The flex items are stretched to fill the container.
+            * flex-start: The flex items are packed toward the start of the cross axis.
+            * flex-end: The flex items are packed toward the end of the cross axis.
+            * center: The flex items are centered along the cross axis.
+            * baseline: The flex items are aligned such as their baselines align.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                align-items: center;
+            }
+            ```
+            --- 
+
+            The align-content property specifies the alignment along the cross axis when there
+            is extra space in the cross-axis. It can have one of the following values:
+
+            * stretch: The flex items are stretched to fill the container.
+            * flex-start: The flex items are packed toward the start of the cross axis.
+            * flex-end: The flex items are packed toward the end of the cross axis.
+            * center: The flex items are centered along the cross axis.
+            * space-between: The flex items are evenly distributed in the flex container. The first
+            flex item is flushed to the start of the container, and the last flex item is flushed
+            to the end of the container.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                align-content: center;
+            }
+            ```
+            --- 
+
+            The order property specifies the order of the flex item, relative to the rest of the
+            flex items inside the same container. Items are ordered by ascending order. The order
+            property has no effect on the order of the flex items if the flex-direction property
+            is set to row or row-reverse.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                order: 1;
+            }
+            ```
+            --- 
+
+            The flex-grow property specifies how much the flex item will grow relative to the rest
+            of the flex items inside the same container. The flex-grow property has no effect if
+            the flex-direction property is set to row or row-reverse.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex-grow: 1;
+            }
+            ```
+            ---
+
+            The flex-shrink property specifies how much the flex item will shrink relative to the
+            rest of the flex items inside the same container. The flex-shrink property has no
+            effect if the flex-direction property is set to row or row-reverse.
+            
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex-shrink: 1;
+            }
+            ```
+            ---
+            The flex-basis property specifies the initial length of a flex item. The flex-basis
+            property has no effect if the flex-direction property is set to row or row-reverse.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex-basis: 100px;
+            }
+            ```
+            ---
+            The flex property is a shorthand property for the flex-grow, flex-shrink, and
+            flex-basis properties.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex: 1 1 100px;
+            }
+            ```
+            ---
+            The align-self property specifies the alignment for the selected item inside the
+            flexible container. The align-self property overrides the align-items property.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                align-self: center;
+            }
+            ```
+            ---
+            The flex-flow property is a shorthand property for the flex-direction and flex-wrap
+            properties.
+
+            Example:
+
+            ```
+            .container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            ```
+
+            [Visual Explanation](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+        ''')
+    
+    with st.expander('CSS Grid'):
+        st.write('''
+            The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+            making it easier to design web pages without having to use floats and positioning.
+            The grid layout is defined by a parent element, with one or more child elements.
+            The child elements are placed into the grid layout by defining a grid item for each
+            element.
+
+            Constructing the grid:
+
+            * The grid container is defined with the display property set to grid or inline-grid.
+            * The grid container is defined with grid-template-columns, grid-template-rows,
+            grid-template-areas, grid-template, grid-auto-columns, grid-auto-rows, grid-auto-flow,
+            or grid properties.
+            * The grid items are placed into the grid by defining a grid area for each item.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            ```
+            ---
+
+            The grid-template-columns property defines the columns of the grid with a space-separated
+            list of values. The values represent the track size, and the space between them represents
+            the grid line.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                grid-template-columns: 50px 50px 50px;
+            }
+            ```
+            ---
+
+            The grid-template-rows property defines the rows of the grid with a space-separated list
+            of values. The values represent the track size, and the space between them represents
+            the grid line.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                grid-template-rows: 50px 50px 50px;
+            }
+            ```
+            ---
+            The grid-template-areas property defines a grid template by referencing the names of the
+            grid areas which are specified with the grid-area property.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                grid-template-areas: "header header header"
+                                        "main main ."
+                                        "footer footer footer";
+            }
+
+            .item1 {
+                grid-area: header;
+            }
+
+            .item2 {
+                grid-area: main;
+            }
+
+            .item3 {
+                grid-area: footer;
+            }
+            ```
+            ---
+            The grid-template property is a shorthand property for the grid-template-rows,
+            grid-template-columns, and grid-template-areas properties.
+
+            Example:
+            
+            ```
+            .container {
+                display: grid;
+                grid-template: 50px 50px 50px / 50px 50px 50px;
+            }
+            ```
+
+            ---
+
+            The grid-auto-columns property specifies the size of an implicitly-created column track.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                grid-auto-columns: 50px;
+            }
+            ```
+
+            ---
+
+            The grid-auto-rows property specifies the size of an implicitly-created row track.
+
+            Example:   
+
+            ```
+            .container {
+                display: grid;
+                grid-auto-rows: 50px;
+            }
+            ```
+            ---
+
+            The grid-auto-flow property specifies how auto-placed items are inserted in the grid.
+
+            Example:
+            
+            ```
+            .container {
+                display: grid;
+                grid-auto-flow: column;
+            }
+            ```
+
+            ---
+
+            The grid property is a shorthand property for the grid-template-rows, grid-template-columns,
+            grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow properties.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                grid: 50px 50px 50px / 50px 50px 50px;
+            }
+            ```
+            ---
+
+            The grid-column-start property specifies the line where the item should start.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-column-start: 1;
+            }
+            ```
+
+            ---
+
+            The grid-column-end property specifies the line where the item should end.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-column-end: 4;
+            }
+            ```
+
+            ---
+
+            The grid-row-start property specifies the line where the item should start.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-row-start: 1;
+            }
+            ```
+
+            ---
+
+            The grid-row-end property specifies the line where the item should end.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-row-end: 4;
+            }
+            ```
+
+            ---
+
+            The grid-column property is a shorthand property for the grid-column-start and
+            grid-column-end properties.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-column: 1 / 4;
+            }
+            ```
+            ---
+
+            The grid-row property is a shorthand property for the grid-row-start and grid-row-end
+            properties.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-row: 1 / 4;
+            }
+            ```
+
+            ---
+
+            The grid-area property specifies a name for the grid item, and a grid area where it
+            should be placed.
+
+            Example:
+
+            ```
+            .item1 {
+                grid-area: header;
+            }
+            ```
+
+            ---
+
+            The justify-items property aligns grid items along the inline (row) axis (as opposed
+            to align-items which aligns along the block (column) axis). This value applies to all
+            grid items inside the container.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                justify-items: center;
+            }
+            ```
+
+            ---
+
+            The align-items property aligns grid items along the block (column) axis (as opposed
+            to justify-items which aligns along the inline (row) axis). This value applies to all
+            grid items inside the container.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                align-items: center;
+            }
+            ```
+
+            ---
+
+            The place-items property is a shorthand property for the align-items and justify-items
+            properties.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                place-items: center;
+            }
+            ```
+
+            ---
+
+            The justify-self property aligns a grid item inside a cell along the inline (row)
+            axis. This value applies to a grid item inside a single cell.
+
+            Example:
+
+            ```
+            .item1 {
+                justify-self: center;
+            }
+            ```
+            
+            ---
+
+            The align-self property aligns a grid item inside a cell along the block (column)
+            axis. This value applies to a grid item inside a single cell.
+
+            Example:
+
+            ```
+            .item1 {
+                align-self: center;
+            }
+            ```
+
+            ---
+
+            The place-self property is a shorthand property for the align-self and justify-self
+            properties.
+
+            Example:
+
+            ```
+            .item1 {
+                place-self: center;
+            }
+            ```
+
+            ---
+
+            The justify-content property aligns a grid container's content along the inline (row)
+            axis. The inline (row) axis is defined to be the same as the block (column) axis of 
+            the containing block.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                justify-content: center;
+            }
+            ```
+
+            ---
+
+            The align-content property aligns a grid container's content along the block (column)
+            axis. The block (column) axis is defined to be the same as the inline (row) axis of
+            the containing block.
+
+            Example:
+
+            ```
+            .container {
+                display: grid;
+                align-content: center;
+            }
+
+            ```
+
+            ---
+
+        ''')
+    
+        
         

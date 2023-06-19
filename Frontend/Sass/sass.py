@@ -35,6 +35,31 @@ def sass():
 
 
         ''')
+    
+    with st.expander("BEM naming method"):
+        st.write('''
+        
+        BEM stands for Block, Element, Modifier. It is a naming convention for CSS classes in HTML and
+        a methodology for developing websites/applications that helps you to create reusable components
+        and code sharing in front-end development.
+
+        There are 3 main parts of a BEM selector:
+
+        * Block: represents the higher level of an abstraction or component. The same as a component and object in OOP.
+        * Element: parts of a block and have no standalone meaning. Any element is semantically tied to its block.
+        * Modifier: a flag on a block or element. Use them to change appearance or behavior.
+
+        Example:
+
+        ```
+            <div class="head">
+                <div class="head__eye head__eye--left">(o)</div>
+                <div class="head__eye head__eye--right">(o)</div>
+            </div>
+            
+        ```
+        
+        ''')
 
     
 

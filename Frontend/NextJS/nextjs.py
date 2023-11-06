@@ -99,7 +99,31 @@ def nextjs():
             ```
             '''
             )
-        
+    with st.expander("Shadcn Components"):
+      st.write(
+        '''
+          ShadCN is a component library providing most of the required components to build
+          your app.
+
+          1. Installation
+
+          ```
+            pnpx shadcn-ui@latest init
+          ```
+
+          2. Customize according to the needs of you project.
+
+          Most common setup:
+          
+          * Typescript
+          * New York
+          * Neutral
+          * Default for globals.css
+          * No for variables
+          * tailwind default
+          * default
+        '''
+        )    
   
     
   

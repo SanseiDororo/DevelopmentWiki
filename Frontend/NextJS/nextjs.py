@@ -122,6 +122,14 @@ def nextjs():
           * No for variables
           * tailwind default
           * default
+
+          3. Add components for the projects.
+
+          ```
+            pnpx shadcn-ui@latest add
+          ```
+          You can add all by pressing a and enter.
+
         '''
         )    
   

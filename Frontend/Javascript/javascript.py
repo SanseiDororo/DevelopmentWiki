@@ -137,37 +137,46 @@ def javascript():
         '''
         )
 
-    with st.expander("Reduce"):
+    
+    with st.expander("Set"):
       st.write(
         '''
-          Reduce is very powerful Javascript array method. It can replace both, filter and find respectively.
-          Reduce iterates over a given array and executes provided callback function. Reduce returns single
-          value which can be number, array or object.
+          Set is built-in Javascript object which stores a collection of unique values. Sets are
+          similar to array but can only store unique values.
 
-          The structure of the reduce method is:
+          We can perform various methods on a provided set.
 
-          array.reduce((acc)=>{},initial value)
-
-          In our case accumulator parameter is called total, and initial value is set to a 0.
-
-          Example:
-          
+          Creating a set:
           ```
-          //Get total salaries
+            // Creating an empty set
+            const mySet = new Set();
 
-          const people = [
-              { 'name' : 'Steven', 'age' : 28, 'job' : 'scientist', 'salary': 1200},
-              { 'name' : 'Ana', 'age' : 35, 'job' : 'doctor', 'salary': 800},
-              { 'name' : 'Lola', 'age' : 48, 'job' : 'singer', 'salary': 1400},
-              { 'name' : 'Chris', 'age' : 28, 'job' : 'dancer', 'salary': 2200},
-            ];
-
-           const dailyTotal = people.reduce((total,person)=>{
-                total += person.salary;
-                return total;
-            },0)
+            // Creating a set with initial values
+            const mySetWithValues = new Set([1, 2, 3]);
 
           ``` 
+          ---
+          Adding or Removing elements:
+          ```
+            mySet.add(2);
+
+            mySet.delete(1); // Removes the value 1 from the set
+
+          ```
+          ---
+
+          Checking existence:
+          ```
+          const mySet = new Set([1, 2, 3]);
+          console.log(mySet.has(2)); // true
+          ```
+          ---
+
+          Getting size:
+          ```
+          console.log(mySet.size);
+
+          ```
         '''
         )    
     

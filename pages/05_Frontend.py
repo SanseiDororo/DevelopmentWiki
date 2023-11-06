@@ -7,6 +7,7 @@ from Frontend.CSS.css import css
 from Frontend.Sass.sass import sass
 from Frontend.Javascript.javascript import javascript
 from Frontend.React.react import react
+from Frontend.Next.nextjs import nextjs
 
 def main():
 
@@ -16,6 +17,7 @@ def main():
         "Sass",
         "Javascript",
         "React",
+        "Next",
         
     ]
     
@@ -31,6 +33,8 @@ def main():
         javascript()
     if sub_page == "React":
         react()
+    if sub_page == "Next":
+        nextjs()
     else:
         pass
 

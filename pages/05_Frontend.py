@@ -7,7 +7,7 @@ from Frontend.CSS.css import css
 from Frontend.Sass.sass import sass
 from Frontend.Javascript.javascript import javascript
 from Frontend.React.react import react
-from Frontend.Next.nextjs import nextjs
+from Frontend.NextJS.nextjs import nextjs
 
 def main():
 

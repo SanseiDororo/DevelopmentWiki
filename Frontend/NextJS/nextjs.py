@@ -23,7 +23,7 @@ def nextjs():
             '''
               We can create next app with the prefered package manager, for exampke pnpm
               ```
-                pnpmx create-next-app@latest
+                pnpx create-next-app@latest
               ```  
               This gives us dialoge screen with several options we can chose from.
             '''
@@ -133,7 +133,16 @@ def nextjs():
         '''
         )    
   
-    
+    with st.expander('Switching Themes'):
+      st.write(
+        '''
+          In order to create Theme Switcher we first need to install next-themes
+
+          ```
+            pnpm install next-themes
+          ```
+        '''
+      )
   
 
           

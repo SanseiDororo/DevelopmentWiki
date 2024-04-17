@@ -49,13 +49,14 @@ def administration():
                     #Change password for a different user
                     sudo passwd username
                 ```
+                -------------------------
 
                 * CREATING GROUPS
 
                 ```
                     sudo groupadd groupname
                 ```
-
+                -------------------------
                 PUTTING USERS IN A GROUP
 
                 ```
@@ -72,13 +73,13 @@ def administration():
                 ```
                     touch filename
                 ```
-                
+                -------------------------
                 * CREATE FOLDER
                 
                 ```
                     mkdir folder name
                 ```
-
+                -------------------------
                 * LIST FILES & FOLDERS
 
                 ```
@@ -89,6 +90,7 @@ def administration():
                 ```
                     cat filename
                 ```
+                -------------------------
             '''
             )
         

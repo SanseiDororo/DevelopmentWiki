@@ -84,6 +84,7 @@ def administration():
 
                 ```
                     ls -al (alias can be ll)
+                ```
                 -------------------------
                 * LIST CONTENT OF A FILE
 

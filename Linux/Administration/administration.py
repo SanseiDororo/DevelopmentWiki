@@ -24,13 +24,13 @@ def administration():
                system. Administrator is super user. If we want to perform the operations as administrators,
                we need to use keyword SUDO
 
-               * Adding user
+               * ADDING USERS
                 
                 ```
                     sudo adduser username
                 ```
 
-               * Switching user
+               * SWITCHING USERS
 
                 ```
                     #Switching user
@@ -40,7 +40,7 @@ def administration():
                     sudo -u username command
                 ```
 
-                #Changing Password
+               * CHANGING PASSWORDS
 
                 ```
                     #Change password
@@ -50,13 +50,14 @@ def administration():
                     sudo passwd username
                 ```
 
-                * Create User Group
+                * CREATING GROUPS
 
                 ```
                     sudo groupadd groupname
                 ```
 
-                Putting User into a group
+                PUTTING USERS IN A GROUP
+
                 ```
                     sudo usermod -a -G groupname username
                 ```
@@ -66,24 +67,24 @@ def administration():
     with st.expander('Folders & Files'):
         st.write(
             '''
-                * Create file
+                * CREATE FILE
                 
                 ```
                     touch filename
                 ```
                 
-                * Create folder
+                * CREATE FOLDER
                 
                 ```
                     mkdir folder name
                 ```
 
-                * List files and folders
+                * LIST FILES & FOLDERS
 
                 ```
                     ls -al (alias can be ll)
 
-                * List content of the file
+                * LIST CONTENT OF A FILE
 
                 ```
                     cat filename

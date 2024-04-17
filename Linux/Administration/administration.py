@@ -29,7 +29,7 @@ def administration():
                 ```
                     sudo adduser username
                 ```
-
+                -------------------------
                * SWITCHING USERS
 
                 ```
@@ -39,7 +39,7 @@ def administration():
                     #Executing command as a different user
                     sudo -u username command
                 ```
-
+                -------------------------
                * CHANGING PASSWORDS
 
                 ```

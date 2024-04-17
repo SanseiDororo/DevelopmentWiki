@@ -15,7 +15,7 @@ def administration():
     st.write(''' ''')
     st.write(''' ''')
 
-    with st.expander('Basic Operations'):
+    with st.expander('Create & Manage Users'):
         st.write(
             '''
                Linux is the most comprehensive os. There is almost infinte list of operations for
@@ -38,6 +38,55 @@ def administration():
 
                     #Executing command as a different user
                     sudo -u username command
+                ```
+
+                #Changing Password
+
+                ```
+                    #Change password
+                    passwd
+
+                    #Change password for a different user
+                    sudo passwd username
+                ```
+
+                * Create User Group
+
+                ```
+                    sudo groupadd groupname
+                ```
+
+                Putting User into a group
+                ```
+                    sudo usermod -a -G groupname username
+                ```
+            '''
+            )
+
+     with st.expander('Folders & Files'):
+        st.write(
+            '''
+                * Create file
+                
+                ```
+                    touch filename
+                ```
+                
+                * Create folder
+                
+                ```
+                    mkdir folder name
+                ```
+
+                * List files and folders
+
+                ```
+                    ls -al (alias can be ll)
+
+                * List content of the file
+
+                ```
+                    cat filename
                 ```
             '''
             )

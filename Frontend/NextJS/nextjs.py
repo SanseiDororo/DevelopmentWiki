@@ -41,10 +41,13 @@ def nextjs():
               ```  
               2. Install Clerk inside the project
               ```
-                npm install @clerk/nextjs
+                pnpm install @clerk/nextjs
               ```
               3. Wrap html object inside the app/layout.tsx with Clerk Provider
+
               ```
+                import { ClerkProvider } from '@clerk/nextjs'
+
                 return (
                     <ClerkProvider>
                       <html lang="en">

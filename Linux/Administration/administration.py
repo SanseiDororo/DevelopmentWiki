@@ -111,7 +111,7 @@ def administration():
             '''
                Below is the lis of linux system folder and their main purpose:
 
-               * / root directory which is the starting point
+               * **/root** directory which is the starting point
                * /bin contains binaries that must be present for the system to but and run
                * /boot contains the kernel, boot image, initial RAM disk image. To confugure
                  the boot loader grub/grub.conf or menu.lst are used.

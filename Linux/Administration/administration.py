@@ -305,23 +305,23 @@ def administration():
                 * Basic commands
 
                 ```
-                    id = Display user identity
+                id = Display user identity
 
-                    whoami = Which user is active
+                whoami = Which user is active
 
-                    chmod = Change file's mode
+                chmod = Change file's mode
 
-                    umask = Set the default file permissions
+                umask = Set the default file permissions
                     
-                    su = Run a shell as another set
+                su = Run a shell as another set
 
-                    sudo = Execute a command as another user.
+                sudo = Execute a command as another user.
                     
-                    chown = Change a file's owner
+                chown = Change a file's owner
                     
-                    chgrp = Change a file's group ownership
+                chgrp = Change a file's group ownership
                     
-                    passwd = Change user's password
+                passwd = Change user's password
 
                 ```
                 -------------------------

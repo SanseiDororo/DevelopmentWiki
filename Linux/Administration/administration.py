@@ -86,6 +86,18 @@ def administration():
                     ls -al (alias can be ll)
                 ```
                 -------------------------
+                * CHANGE FOLDERS
+
+                ```
+                    cd foldername
+                ```
+                -------------------------
+                * PRINT WORKING DIRECTORY
+
+                ```
+                    pwd
+                ```
+                -------------------------
                 * LIST CONTENT OF A FILE
 
                 ```

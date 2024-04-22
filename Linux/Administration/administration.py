@@ -103,6 +103,32 @@ def administration():
                 ```
                     less filename
                 ```
+                * COPY FILES AND FOLDERS
+
+                ```
+                    cp item... folder
+                ```
+                -------------------------
+                * MOVE AND RENAME FILES
+
+                ```
+                    mv item_name1 item_name2
+                    
+                    mv file... folder
+                ```
+                -------------------------
+                * REMOVING FILES AND FOLDERS
+
+                ```
+                    rm item
+
+                    Available flegs:
+                    * -i interactive
+                    * -r --recursive
+                    * -f --force
+                    * -v --verbose
+                ```
+                -------------------------
                 
             '''
             )
@@ -135,4 +161,49 @@ def administration():
                
             '''
             )    
-    
+    with st.expander('Commands'):
+        st.write(
+            '''
+                Short list of useful commands
+
+                
+                * TYPE
+
+                ```
+                    Displays the kinf of command the shell will execute
+                    
+                    type command
+                ```
+                -------------------------
+               
+               * WHICH
+
+                ```
+                    Displays executable's location
+                    
+                    which python
+                ```
+                -------------------------
+                
+                * HELP
+
+                ```
+                    Shows the docstring of the command
+                    
+                    help cd
+                    mkdir --help
+                ```
+                -------------------------
+                * MAN
+
+                ```
+                    Displays program manual page
+                    
+                    man ls
+
+                    Single line program manual
+                    whatis ls
+                ```
+                -------------------------
+            '''
+            ) 

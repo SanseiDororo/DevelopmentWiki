@@ -1,0 +1,11 @@
+  986  git commit -m "New components refactored: cleaned redundand code, commented-out actions on elements. Alignement, Scene, Selections and Surface are ready for the Wasm implementation. RightSidebar.js component deleted because it is unused copy"
+  987  git push origin lightmass-ui
+  988  git status
+  989  git clone -b lightmass-ui git@github.com:nanovis/mesocraft-react.git
+  996  git commit -m "Files and folders section extended"
+  997  git push origin main
+ 1002  git commit -m "File system folders added"
+ 1005  git commit -m "File system folders bolded"
+ 1007  git add .
+ 1008  git commit -m "Commands section added"
+ 1009  git push -u origin main

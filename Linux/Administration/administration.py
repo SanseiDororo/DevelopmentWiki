@@ -205,5 +205,138 @@ def administration():
                     whatis ls
                 ```
                 -------------------------
+                * ALIASES
+
+                ```
+                    Aliases are great way to create own commands vocabulary
+
+                    alias command_name='command_to_exexute'
+                ```
+                -------------------------
+            '''
+            ) 
+    
+    with st.expander('Redirecting & Storing Output'):
+        st.write(
+            '''
+                Redirecting and storing the standard output is very common and useful operation.
+
+                
+                * Store content in a file
+
+                ```
+                    command > file.txt
+
+                    #command can be piped and stored
+
+                    command | grep keyword > command.txt
+                    history | grep git > git_commands.txt
+
+                ```
+                -------------------------
+               
+               
+            '''
+            ) 
+    with st.expander('Keybord & Terminal'):
+        st.write(
+            '''
+                In order to be able to efficiently use keyboard and terminal, the following
+                shortcuts and commands can be handy.
+
+                
+                * Clear The Screen
+
+                ```
+                    clear
+                    ctrl + L
+
+                ```
+                -------------------------
+
+                * Clear The Screen
+
+                ```
+                    clear
+                    ctrl + L
+
+                ```
+                -------------------------
+
+               * Cursor Movement
+
+                ```
+                    CTRL + A = beginning of the line
+                    CTRL + E = end of the line
+                    CTRL + F = move 1 character
+                    CTRL + B = move 1 character back
+                    ALT + F  = move 1 word forward
+                    ALT + B move 1 word backward
+                    
+                ```
+                -------------------------
+
+                * Editing commads
+
+                ```
+                    CTRL + D = delete character at the cursor location
+                ```
+                -------------------------
+
+                * Cutting & Parting
+
+                ```
+                    CTRL + K = kill text from the cursor location to the end of the line
+                    CTRL + U = kill the text frum the cursor location to the beginning of the line
+                    CTRL + Y = Yank the text from the kill-ring and insert it at the cursor location
+                    
+                ```
+                -------------------------
+               
+            '''
+            ) 
+    with st.expander('Permissions'):
+        st.write(
+            '''
+                Linux is multiuser operation system, which is why permissions play cruical role
+                in defining scope of the user's space
+
+                
+                * Basic commands
+
+                ```
+                    id = Display user identity
+                    whoami = Which user is activr
+                    chmod = Change file's mode
+                    umask = Set the default file permissions
+                    su = Run a shell as another set
+                    sudo = Execute a command as another user.
+                    chown = Change a file's owner
+                    chgrp = Change a file's group ownership
+                    passwd = Change user's password
+
+                ```
+                -------------------------
+
+                * Permissions
+
+                ```
+                   There are three basic permissions:
+
+                   r = read
+                   w = write 
+                   x = execut
+
+                   Permisions can be defined on the level of:
+
+                   |Owner |Group | World|
+
+                   To change a user permission chmod command is used 
+
+                ```
+                -------------------------
+
+                
+    
             '''
             ) 

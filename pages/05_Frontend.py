@@ -37,7 +37,7 @@ def main():
     if sub_page == "Next":
         nextjs()
     if sub_page == "Zod":
-    nextjs()
+        zod()
     else:
         pass
 

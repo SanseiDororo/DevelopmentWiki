@@ -8,6 +8,7 @@ from Frontend.Sass.sass import sass
 from Frontend.Javascript.javascript import javascript
 from Frontend.React.react import react
 from Frontend.NextJS.nextjs import nextjs
+from Frontend.Zod.zod import zod
 
 def main():
 
@@ -18,7 +19,7 @@ def main():
         "Javascript",
         "React",
         "Next",
-        
+        "Zod",
     ]
     
     sub_page = st.sidebar.selectbox("Menu", menu)
@@ -35,6 +36,8 @@ def main():
         react()
     if sub_page == "Next":
         nextjs()
+    if sub_page == "Zod":
+    nextjs()
     else:
         pass
 

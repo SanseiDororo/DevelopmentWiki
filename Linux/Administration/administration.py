@@ -329,17 +329,17 @@ def administration():
                 * Permissions
 
                 ```
-                   There are three basic permissions:
+                There are three basic permissions:
 
-                   r = read
-                   w = write 
-                   x = execut
+                r = read
+                w = write 
+                x = execut
 
-                   Permisions can be defined on the level of:
+                Permisions can be defined on the level of:
 
-                   |Owner |Group | World|
+                |Owner |Group | World|
 
-                   To change a user permission chmod command is used 
+                To change a user permission chmod command is used 
 
                 ```
                 -------------------------

@@ -293,6 +293,24 @@ def react():
             '''
             
         )
+      
+      with st.expander('React Query / Tanstack Query'):
+        st.write(
+            '''
+                React Query is a library to manage server states. It handles:
+
+                * Loading/Error states
+                * Prefething
+                * Pagination
+                
+
+                React Query maintains cache of the server data on the client. There are several ways
+                and procedures how to update and fetch this data, which can be defined according to the
+                user needs.
+
+            '''
+            
+        )
     
 
    

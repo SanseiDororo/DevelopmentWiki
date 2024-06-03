@@ -14,7 +14,19 @@ def zod():
     with st.expander("Usage"):
         st.write(
             '''
-            
+                In order to be able to use Zod, we need to create the appropriate schemas.
+
+                1. On the root level of the project, we create schema folder. In the schema
+                we create appropriate schema.ts file in which we create data validation schema.
+
+                ```
+                    // creating a schema for strings
+                    const mySchema = z.string();
+                    
+                    // parsing
+                    mySchema.parse("tuna"); // => "tuna"
+                    mySchema.parse(12); // => throws ZodError
+                ```
             '''
             )
    

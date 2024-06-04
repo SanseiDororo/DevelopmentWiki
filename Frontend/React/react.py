@@ -308,6 +308,14 @@ def react():
               React Query maintains cache of the server data on the client. There are several ways
               and procedures how to update and fetch this data, which can be defined according to the
               user needs.
+
+              In order to be able to use ReactQuery, we need to:
+
+              * Install the library
+              * Create query client which manages our queries and caches the data
+              * Apply QueryProvider 
+              * Define useQuery hook which fetches data from the server
+              -------------------------------------
           '''
           
       )

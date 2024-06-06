@@ -316,6 +316,66 @@ def react():
               * Apply QueryProvider 
               * Define useQuery hook which fetches data from the server
               -------------------------------------
+
+              BASIC SETUP
+
+              In order to be able to use react query, we need to:
+
+              ```
+              // create a queryClient
+              const queryClient = new QuertClient()
+
+              // wrap the app with the QueryClient Provider and pass client as prop
+              <QueryClientProvider client={queryClient}>
+                <div className="App">
+                  <Component />
+                </div>
+                </QueryClientProvider>
+              ```
+
+
+              ------
+
+              On the level of the component in which we would like to render the received data,
+              we need to initialize the useQuery hook, which returns a data and accepts an object
+              of options as for example:
+
+              * queryKey - what defines the received data in the query cache
+              * queryFn - this is the function which runs to fetch the data
+              * isLoading - checks if the data is loading
+              * isError - checks if there was an error with loading the data
+
+              -----
+              DEVTOOLS
+
+              ReactQuery devtools offer various aspects of inspection in regards to the used
+              reactQueries. We can Refetch, Invalidate, Reset, Trigger Error and Loading etc. 
+              Besides, we can inspect the data corresponding to a specific queryKey. In order
+              to be able to use the devtools we need to import it and place it into the app:
+              ```
+                import { Posts } from './Posts'
+                import './App.css'
+                import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+                import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+                
+                const queryClient = new QueryClient()
+                
+                function App() {
+                  return (
+                    // provide React Query client to App
+                    <QueryClientProvider client={queryClient}>
+                      <div className="App">
+                        <h1>Blog &apos;em Ipsum</h1>
+                        <Posts />
+                      </div>
+                      <ReactQueryDevtools />
+                    </QueryClientProvider>
+                  )
+                }
+                
+                export default App
+
+              ```
           '''
           
       )

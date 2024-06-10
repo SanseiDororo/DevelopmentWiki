@@ -376,6 +376,52 @@ def react():
                 export default App
 
               ```
+              --------
+              INFINITE QUERY
+
+              Infinite query hook is used to implement the infinite scroll.
+
+              useInfiniteQuery has the following structure:
+              
+              ```
+                useInfiniteQuery({
+                  queryKey: ["key"],
+                  queryFn: ({pageParam = initialUrl} => {fetchUrl(pageParam)})
+                  getNextPageParam:(lastPage) => {return lastPage.next || undefined}
+                })
+                return (<InfiniteScroll loadMore={()=> if(!isFetching){fetchNextPage()}}hasMore={hasNextPage})>
+                  {data.map(...)}
+                  </InfiniteScroll>
+              ```
+
+              useInfitieQuery returns :
+
+              * data: 
+              * fetchNextPage: function which returns more available data
+              * hasNextPage: boolean which determines if there is more data
+
+              --------
+              MUTATIONS
+
+              Mutation hooks are used to perform CRUD operations on the server. 
+
+              The basic structure is like this:
+
+              * Define an api call
+              * Create a useMutation hook which takes an api call as a mutateFn
+              * Pass the mutation hook as a prop to the target component
+              * Call it, as for example with onClick event
+
+              ```
+                // Example of the useMutationHook
+                const updateMutation = useMutation({
+                  mutationFn: (postId) => updatePost(postId),
+                })
+
+                //Example of the call
+                <button onClick={() => updateMutation.mutate(post.id)}>
+              ```
+
           '''
           
       )

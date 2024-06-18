@@ -365,8 +365,8 @@ def polars():
                 * skew
                 * kurtosis
                 * entropy
-                
 
+            --------------------------
                VALUE COUNTS
 
                ```

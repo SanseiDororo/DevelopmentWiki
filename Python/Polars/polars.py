@@ -348,34 +348,24 @@ def polars():
                         pl.col('Fare').mean()
                     )
                 )
+               ```
 
                 AVAILABLE METHODS
 
 
                 * count
-                
                 * sum
-
                 * product
-
                 * min
-
                 * median
-
                 * mean
-
                 * max
-
                 * std (standard deviation)
-
                 * var (variance)
-
                 * skew
-
                 * kurtosis
-                
                 * entropy
-               ```
+                
 
                VALUE COUNTS
 
@@ -525,6 +515,7 @@ def polars():
 
             """
         ) 
+
 
     with st.expander("Quantiles & Bining"):
         st.write(

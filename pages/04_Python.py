@@ -2,7 +2,6 @@
 import streamlit as st
 st.set_page_config(page_title="Python")
 
-
 from Python.Intro.intro import intro
 from Python.Blocks.building_blocks import building_blocks
 from Python.Numeric.numeric import numeric_types
@@ -15,16 +14,13 @@ from Python.Distributing.distributing import distributing
 from Python.Isolation.isolation import isolation
 from Python.Tensor.tensor import tensor
 from Python.Pandas.pandas import pandas
+from Python.Polars.polars import polars
 from Python.Numpy.numpy import numpy
 from Python.Altair.altair import altair
 
-
-
 the_truth = zen()
 
-
 def main():
-
     menu = [
         "Intro",
         "Building Blocks",
@@ -36,42 +32,33 @@ def main():
         "Distributing",
         "Isolation",
         "Pandas",
+        "Polars",
         "Numpy",
         "TensorFlow",
         "Altair",
-        
     ]
+    
+    functions_map = {
+        "Intro": intro,
+        "Building Blocks": building_blocks,
+        "Numeric Types": numeric_types,
+        "Functions": functions,
+        "Sequences": sequences,
+        "Standard Library": standard_library,
+        "External Libraries": external_libraries,
+        "Distributing": distributing,
+        "Isolation": isolation,
+        "Pandas": pandas,
+        "Polars": polars,
+        "Numpy": numpy,
+        "TensorFlow": tensor,
+        "Altair": altair,
+    }
+
     sub_page = st.sidebar.selectbox("Menu", menu)
 
-    if sub_page == "Intro":
-        intro()
-    elif sub_page == "Building Blocks":
-        building_blocks()
-    elif sub_page == "Numeric Types":
-        numeric_types()
-    elif sub_page == "Functions":
-        functions()
-    elif sub_page == "Sequences":
-        sequences()
-    elif sub_page == "Standard Library":
-        standard_library()
-    elif sub_page == "External Libraries":
-        external_libraries()
-    elif sub_page == "Distributing":
-        distributing()
-    elif sub_page == "Isolation":
-        isolation()
-    elif sub_page == "Pandas":
-        pandas()
-    elif sub_page == "Numpy":
-        numpy()
-    elif sub_page == "TensorFlow":
-        tensor()
-    elif sub_page == "Altair":
-        altair()
-    else:
-        pass
-
+    if sub_page in functions_map:
+        functions_map[sub_page]()
 
 if __name__ == "__main__":
     main()

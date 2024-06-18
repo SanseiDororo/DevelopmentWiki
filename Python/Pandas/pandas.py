@@ -12,6 +12,9 @@ def pandas():
             data, tools for reading and writing data from various sources, and functions 
             for performing operations on the data. Pandas is often used in conjunction with 
             other libraries like NumPy and Matplotlib for data analysis and visualization.  
+
+            **After Polars came into existence Pandas should be considered as legacy. Please
+            see the Polars section for more**
     
     """
     )

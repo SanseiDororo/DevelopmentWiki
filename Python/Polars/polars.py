@@ -353,16 +353,27 @@ def polars():
 
 
                 * count
+                
                 * sum
+
                 * product
+
                 * min
+
                 * median
+
                 * mean
+
                 * max
+
                 * std (standard deviation)
+
                 * var (variance)
+
                 * skew
+
                 * kurtosis
+                
                 * entropy
                ```
 
@@ -515,51 +526,6 @@ def polars():
             """
         ) 
 
-    with st.expander("Arithmetic Operations"):
-        st.write(
-            """
-            
-            With Pandas we can perform arithmetic operations on pandas data series.
-
-            ADDITION 
-
-            ```df.column1.add(df.column2)```
-            
-            add method allows to define additional arguments:
-
-            * Replacing NaN with 0
-
-            ``` df.column1.add(df.column2, fill_value=0)
-
-                df.column1 + df.column2```
-
-            To store data under new column:
-
-            ```df["new_column"] = df.column1.add(df.column2)```
-
-            EXAMPLE
-
-            ```cars.model_year = cars.model_year.add(1900)```
-
-            MULTIPLICATION
-
-            ``` 
-                df.column1 * df.column2 
-                df.column1.mul(df.column2, fill_value=0)
-            ```
-
-            SUBTRACTION
-
-            ```df.column1.sub(df.column2, fill_value=0)```
-
-        
-            DIVISION
-
-            ```df.column1.div(df.column2)```
-
-
-            """
-        )   
     with st.expander("Quantiles & Bining"):
         st.write(
             """

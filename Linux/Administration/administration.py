@@ -348,3 +348,15 @@ def administration():
     
             '''
             ) 
+    
+    with st.expander('Environmental Variables'):
+        st.write(
+            '''
+                Environmental variables are key-value pairs used by operating systems and applications to store configuration settings. 
+                They provide a way to pass configuration information to applications dynamically, 
+                without hardcoding this information into the application's source code.
+
+                ------------------
+    
+            '''
+            ) 

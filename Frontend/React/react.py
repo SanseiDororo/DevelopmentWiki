@@ -313,7 +313,7 @@ def react():
 
               * Install the library
               * Create query client which manages our queries and caches the data
-              * Apply QueryProvider 
+              * Apply QuerContainerizationyProvider 
               * Define useQuery hook which fetches data from the server
               -------------------------------------
 
@@ -425,7 +425,188 @@ def react():
           '''
           
       )
-    
+    with st.expander("React Hook Form & ShadCN Form"):
+      st.write(
+        '''
+          Forms are the most common way to collect the user inputs. Some of the most common 
+          form fields are:
+
+            * Input (text, password, email)
+            * Date (for passing the dates)
+            * Checkboxes (for boolean decisions)
+            * Textarea (for comments or feedbacks)
+            * Buttons
+
+            React Hook Form is a library for managing form state and validation in React applications.
+            It leverages React hooks to provide a simple and performant way to handle form inputs, validation, 
+            and submission. Unlike traditional form libraries, React Hook Form focuses on minimizing re-renders and 
+            optimizing performance by utilizing uncontrolled components and native HTML inputs
+
+            React hook provides several built-in methods which can be used to perform all the neccessary 
+            form operations:
+
+          * **register Method** : Registers an input or select element and its validation rules.
+          * **handleSubmit Method** : Handles form submission and validation.
+          * **watch Method** : Watches specified inputs and returns their values.
+          * **reset Method** : Resets the form state and input values.
+          * **setValue Method** : Sets the value of an input programmatically.
+          * **getValues Method** : Returns all form values.
+          * **trigger Method** : Triggers validation for specified inputs
+          
+          (React Hook Tutorial)['https://www.youtube.com/watch?v=KejZXxFCe2k&list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s']
+
+          Shadcn is a react component library which helps to build application faster by providing most common 
+          elements, methods and others.
+
+          ShadCN form is build on top of React Hook Form. It is easy to implement, especially in combination
+          with the zod data validation library. Below is a simple example of the login form implementation. Form
+          component has 3 main parts:
+
+          * form schema provided by zod
+          * useForm hook which binds schema and form together
+          * handleSubmit function which gets called, when submit button is triggerd
+
+          ```
+          //We must define the component as a client component, since user is passing the data
+          'use client'
+
+          //Zod and useForm are crucial, other imports are associated with ShadCN
+          import { useForm } from 'react-hook-form'
+          import { zodResolver } from '@hookform/resolvers/zod'
+          import { Button } from '@/components/ui/button'
+          import {
+            Card,
+            CardContent,
+            CardDescription,
+            CardFooter,
+            CardHeader,
+            CardTitle,
+          } from '@/components/ui/card'
+          import { Input } from '@/components/ui/input'
+          import { Label } from '@/components/ui/label'
+          import { PersonStandingIcon } from 'lucide-react'
+          import Link from 'next/link'
+          import * as z from 'zod'
+          import {
+            Form,
+            FormControl,
+            FormDescription,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+          } from '@/components/ui/form'
+          import { useToast } from '@/components/ui/use-toast'
+
+          //In order to perform client side data validation, we have to create schema, which is
+          // zod object
+
+          const formSchema = z.object({
+            email: z.string().email(),
+            password: z.string(),
+          })
+
+          const LoginPage = () => {
+            //Toaster Code
+            const { toast } = useToast()
+
+            /*Connect Zod Resolver With React
+              We pass the <z.infer<typeof formSchema>> data type to form and define zod
+              As as resolver. Besided we pass the default values*/
+
+
+            const form = useForm<z.infer<typeof formSchema>>({
+              resolver: zodResolver(formSchema),
+              defaultValues: {
+                email: '',
+                password: '',
+              },
+            })
+
+            /*
+              This is handle submit function which takes data as a parameter and
+              validates it agains the provided formSchema. This is just an example
+              which is why submitted data are shown via toas
+            */
+
+            const handleSubmit = (data: z.infer<typeof formSchema>) => {
+              console.log(data)
+              toast({
+                title: 'Form data pano toast',
+                description: (
+                  <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                ),
+              })
+            }
+
+            return (
+              <>
+                <PersonStandingIcon size={50} />
+                <Card className="w-full max-w-sm">
+                  <CardHeader>
+                    <CardTitle>Login</CardTitle>
+                    <CardDescription>Login to your supported account.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    /*
+                    This part is very important since form is unpacked as a property
+                    of a Shadcn Form Component
+                    */
+                    <Form {...form}>
+                      <form
+                        className="flex flex-col gap-4"
+                        onSubmit={form.handleSubmit(handleSubmit)}
+                      >
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email</FormLabel>
+                              <FormControl>
+                                <Input placeholder="john.doe@gmail.com" {...field} />
+                              </FormControl>
+                              <FormDescription>
+                                Please enter your sign up mail.
+                              </FormDescription>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="password"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Password</FormLabel>
+                              <FormControl>
+                                <Input placeholder="password" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <Button type="submit">Login</Button>
+                      </form>
+                    </Form>
+                  </CardContent>
+                  <CardFooter className="justify-between">
+                    <small>Dont have account</small>
+                    <Button asChild variant={'outline'} size="sm">
+                      <Link href="sign-up">Sign Up</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </>
+            )
+          }
+          export default LoginPage
+
+
+          ```
+
+        '''
+      )
 
    
 

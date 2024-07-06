@@ -455,6 +455,8 @@ def react():
           
           (React Hook Tutorial)['https://www.youtube.com/watch?v=KejZXxFCe2k&list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s']
 
+
+          ---------------------------------
           Shadcn is a react component library which helps to build application faster by providing most common 
           elements, methods and others.
 
@@ -465,6 +467,8 @@ def react():
           * form schema provided by zod
           * useForm hook which binds schema and form together
           * handleSubmit function which gets called, when submit button is triggerd
+
+          -----------------------------------------
 
           ```
           //We must define the component as a client component, since user is passing the data

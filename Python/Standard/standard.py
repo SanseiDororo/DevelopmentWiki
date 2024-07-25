@@ -395,3 +395,26 @@ def standard_library():
 
             """
         )
+    
+    with st.expander("Annotated"):
+        st.write(
+            """
+                The Annotated type in Python allows you to add metadata to a type hint, 
+                and it acts like an array of values where the first value is the type itself, 
+                followed by any number of metadata annotations. The value is still defined,
+                infered or interpreted by the python itself, while metadata serves as additional
+                information for developers, linters etc.
+
+                ```
+                    # Basic usage
+                    Annotated[type, annotation1, annotation2, ...]
+                ```
+
+                ```
+                def process_item(item: Annotated[int, "Must be a positive integer"]):
+                    pass
+                ```
+
+
+            """
+        )

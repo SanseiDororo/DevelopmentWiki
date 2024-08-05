@@ -20,6 +20,7 @@ def tailwind():
                 * Base
                 * Components
                 * Utilities
+                --------
 
                 Base layer allows us to target any html class. In Components layer, we can
                 define styles for specific components. In utilities layer we can create 
@@ -38,7 +39,7 @@ def tailwind():
                     font-size:2.5 rem
                 }
                 ```
-
+                --------
 
             '''
             )

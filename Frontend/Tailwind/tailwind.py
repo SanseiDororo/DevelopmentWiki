@@ -10,7 +10,7 @@ def tailwind():
     st.write(''' ''')
     st.write(''' ''')
     
-    with st.expander("Globals"):
+    with st.expander("Global Styling"):
         st.write(
             '''
                 Main styling declarations are stored in the globals.css file.
@@ -43,7 +43,22 @@ def tailwind():
 
             '''
             )
-   
+    with st.expander('Useful declarations'):
+        st.write(
+            '''
+                * As Child
+
+                When as child is used, this means that all the styling is passed to the nested 
+                element. For example:
+
+                ```
+                #Link inherits button styling.
+                <Button asChild>
+                    <Link></Link>
+                </Button>
+                ```
+            '''
+        )
 
           
           

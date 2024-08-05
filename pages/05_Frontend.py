@@ -9,6 +9,7 @@ from Frontend.Javascript.javascript import javascript
 from Frontend.React.react import react
 from Frontend.NextJS.nextjs import nextjs
 from Frontend.Zod.zod import zod
+from Frontend.Tailwind.tailwind import tailwind
 
 def main():
 
@@ -16,6 +17,7 @@ def main():
         "Intro", 
         "CSS",
         "Sass",
+        "Tailwind",
         "Javascript",
         "React",
         "Next",
@@ -30,6 +32,8 @@ def main():
         css()
     if sub_page == "Sass":
         sass()
+    if sub_page == "Tailwind":
+        tailwind()
     if sub_page == "Javascript":
         javascript()
     if sub_page == "React":

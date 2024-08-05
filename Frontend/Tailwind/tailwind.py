@@ -49,14 +49,17 @@ def tailwind():
                 * As Child
 
                 When as child is used, this means that all the styling is passed to the nested 
-                element. For example:
+                element. For example all styling associated with the Button will be applied to
+                the Button as well:
 
                 ```
-                #Link inherits button styling.
                 <Button asChild>
                     <Link></Link>
                 </Button>
                 ```
+                ---------------------------------
+
+
             '''
         )
 

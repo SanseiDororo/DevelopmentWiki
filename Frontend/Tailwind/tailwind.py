@@ -41,6 +41,12 @@ def tailwind():
                 ```
                 --------
 
+                ShadCN is great component library based on Tailwind CSS. We can make custom
+                themes on their wep page [ShadCN Themes](https://ui.shadcn.com/themes).
+
+                When we chose all the customization we copy the code and paste it into the
+                globals.css
+
             '''
             )
     with st.expander('Useful declarations'):

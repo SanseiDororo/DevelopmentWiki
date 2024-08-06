@@ -27,6 +27,32 @@ def zod():
                     mySchema.parse("tuna"); // => "tuna"
                     mySchema.parse(12); // => throws ZodError
                 ```
+                ----------------------
+                
+                2. The basic form with zod schema validation has the following structure:
+
+                Most common hook to work with forms is React Hook Form.
+
+                The component which serves as form must be declared 'use client'
+
+                * Create zod schema:
+
+                import * as z from zod
+
+                ```
+                const loginSchema = z.object({
+                    email: z.string().email(),
+                    password: z.string()
+                })
+                ```
+
+                * Create form
+
+                ```
+                cons form = useForm<z.infer<typeof loginSchema>>({
+                    resolver = zodResolver(formSchema)
+                })
+                ```
             '''
             )
    

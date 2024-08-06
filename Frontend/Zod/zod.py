@@ -50,7 +50,11 @@ def zod():
 
                 ```
                 cons form = useForm<z.infer<typeof loginSchema>>({
-                    resolver = zodResolver(formSchema)
+                    resolver : zodResolver(formSchema),
+                    defaultValues:{
+                        email: '',
+                        password: '',
+                    }
                 })
                 ```
             '''
